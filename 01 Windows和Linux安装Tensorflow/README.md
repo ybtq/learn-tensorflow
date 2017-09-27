@@ -16,7 +16,7 @@ curl -L \
 
 **windows x64 cpu版本**
 
-用浏览器打开
+下载该文件:
 ```
 https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-cpu-windows-x86_64-1.3.0.zip
 ```
@@ -28,18 +28,18 @@ C:\Program Files (x86)\Microsoft SDKs\tensorflow\c
 
 别急，参考[由动态库文件dll生成lib库文件](http://blog.csdn.net/giselite/article/details/32098169)一文，我们可以通过tensorflow.dll生成tensorflow.lib文件（不是指静态库）。
 
-![tensorflow_with_lib](http://images2017.cnblogs.com/blog/858854/201709/858854-20170927183700403-985966046.png)
+![tensorflow_with_lib](./images/tensorflow_with_lib.png)
 
 你可以在本仓库中的`01 Windows和Linux安装Tensorflow/tensorflow-cpu-1.3-exp-lib`下载现成的文件
 
 
 **linux x64 cpu版本**
 
-用浏览器打开
+下载该文件:
 ```
 https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-cpu-linux-x86_64-1.3.0.tar.gz
 ```
-解压即可
+解压到/usr/local目录:
 ```
 sudo tar -C /usr/local -zxf libtensorflow-cpu-linux-x86_64-1.3.0.tar.gz
 ```
@@ -60,8 +60,8 @@ int main() {
 **windows下编译**
 
 新建一个vs工程，将helloworld.c添加到工程，配置如下：
-![VS include](http://images2017.cnblogs.com/blog/858854/201709/858854-20170927184516919-2143231519.png)
-![Linker input](http://images2017.cnblogs.com/blog/858854/201709/858854-20170927184524465-1832719379.png)
+![property_vs_directories](./images/property_vc_directories.png)
+![property_linker_input](./images/property_linker_input.png)
 
 注意，因为只有x64的dll，因此只能编译x64的版本。
 
